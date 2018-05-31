@@ -3,6 +3,7 @@
 #include "json.hpp"
 
 #include <iostream>
+#include <vector>
 #include <string>
 #include <functional>
 
@@ -14,7 +15,11 @@ int main(int argc, char* argv[])
 	using namespace Sockets;
 	using json = nlohmann::json;
 
-	eXaDrumsApi::eXaDrums drumKit{"/home/jeremy/Desktop/Prog/eXaDrums/eXaDrums/Data/"};
+	std::vector<std::string> args(argv, argv + argc);
+
+	const auto dataFolder{args[1]};
+
+	eXaDrumsApi::eXaDrums drumKit{dataFolder.data()};
 
 
 	const std::map<std::string, std::function<void(const json&, json&)>> methods
