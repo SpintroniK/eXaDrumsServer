@@ -29,7 +29,8 @@ int main(int argc, char* argv[])
 		{"isStarted", 		[&] (const json& params, json& res) { res = drumKit.IsStarted(); }},
 		{"enableMetronome", [&] (const json& params, json& res) { drumKit.EnableMetronome(params[0].get<int>()); }},
 		{"getKitsNames", 	[&] (const json& params, json& res) { res = drumKit.GetKitsNames(); }}, 
-		{"changeTempo", 	[&] (const json& params, json& res) { drumKit.ChangeTempo(params[0].get<int>()); }}
+		{"changeTempo", 	[&] (const json& params, json& res) { drumKit.ChangeTempo(params[0].get<int>()); }}, 
+		{"getKitsNames", 	[&] (const json& params, json& res) { res = drumKit.GetKitsNames(); }}
 	};
 
 
