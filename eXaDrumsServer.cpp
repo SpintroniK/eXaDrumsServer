@@ -1,6 +1,7 @@
 #include "CppSockets.hpp"
-#include "eXaDrums.h"
 #include "json.hpp"
+
+#include <exadrums/eXaDrums.h>
 
 #include <iostream>
 #include <vector>
